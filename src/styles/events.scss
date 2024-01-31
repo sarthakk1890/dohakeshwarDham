@@ -1,0 +1,23 @@
+.events {
+    padding-bottom: 50px;
+    background-color: #F8DB82;
+
+    >.event-heading {
+        padding-top: 120px;
+    }
+
+    >div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    >div>h2 {
+        color: #91241e;
+        margin: 15px;
+        font-size: 3vw;
+        font-weight: 450;
+        border-bottom: 2px solid red;
+    }
+}

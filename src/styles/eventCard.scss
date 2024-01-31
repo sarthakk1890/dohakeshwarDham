@@ -1,0 +1,41 @@
+.eventCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgb(148, 0, 0);
+    color: white;
+    margin: 20px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+
+    >img {
+        transition: all 0.2s ease-in-out;
+        width: 40rem;
+        height: 20rem;
+    }
+
+    >span {
+        background: rgb(148, 0, 0);
+        width: 100%;
+        text-align: center;
+        position: relative;
+        padding: 10px;
+    }
+
+    &:hover {
+        >img {
+            transform: scale(1.2);
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .eventCard{
+        >img{
+            width: 25rem;
+            height: 10rem;
+        }
+    }
+}

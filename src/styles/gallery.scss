@@ -1,0 +1,42 @@
+.gallery{
+    padding-top: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    padding-bottom: 30px;
+    background-color: #F8DB82;
+
+    > video{
+        width: 35rem;
+        height: 25rem;
+        margin: 20px;
+    }
+
+    > img {
+        max-width: 25rem;
+        max-height: 20rem;
+        margin: 20px;
+        transition: all 0.2s ease-in ;
+        border-radius: 10px;
+
+        &:hover{
+            transform: scale(1.05);
+            filter: drop-shadow(rgba(0, 0, 0, 0.35) 0px 5px 15px);
+            border-radius: 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .gallery{
+        padding-top: 70px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .gallery{
+        padding-top: 0;
+    }
+}

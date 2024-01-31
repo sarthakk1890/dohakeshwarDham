@@ -1,0 +1,183 @@
+footer {
+    // height: 50vh;
+    width: 100vw;
+    background: #ef3f366c;
+    position: relative;
+    bottom: 0;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+    &::before {
+        content: '';
+        background-image: url('../assets/mandir_footer.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0.2;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
+
+    .main {
+        position: relative;
+        padding: 50px;
+        display: flex;
+        justify-content: space-evenly;
+
+        >div {
+            >h3 {
+                font-size: 2rem;
+                color: #780600;
+            }
+        }
+
+        .contact {
+            >p {
+                font-weight: 450;
+            }
+
+            >ul {
+                margin-top: 10px;
+
+                >li {
+                    padding-bottom: 2px;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                }
+            }
+        }
+
+        .social-media>ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            >li {
+                margin: 5px 15px;
+
+                >a {
+                    color: black;
+
+                    >svg {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    .credits {
+        position: relative;
+        bottom: 0;
+        font-size: 0.9rem;
+        padding: 10px;
+        width: 100%;
+        background-color: rgba(255, 0, 0, 0.649);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+
+        >.me {
+            border-bottom: 1px solid rgb(156, 1, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+
+            >p {
+                width: 100%;
+                text-align: center;
+            }
+
+            >.links {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                >a {
+                    margin: 5px 5px 2px;
+                    color: black;
+
+                    >svg {
+                        font-size: 15px;
+                    }
+                }
+
+            }
+        }
+
+        >.credits-2{
+            width: 100%;
+            text-align: center;
+        }
+
+        >.copyRight {
+            padding: 5px 0px 0px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    footer {
+        .main {
+            >div {
+                >h3 {
+                    font-size: 1.5rem;
+                }
+            }
+
+            >.contact {
+                p {
+                    font-size: 0.9rem;
+                }
+
+                >ul>li {
+                    font-size: 0.9rem;
+                }
+            }
+
+            >.social-media {
+                >ul>li>a>svg {
+                    font-size: 1rem
+                }
+            }
+        }
+
+        .credits {
+            font-size: 0.7rem;
+
+            >.me {
+                >.links {
+                    >a {
+                        >svg {
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 470px) {
+    footer {
+        .main {
+            flex-direction: column;
+
+            .social-media {
+                padding-top: 20px;
+
+                >ul {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

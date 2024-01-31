@@ -1,0 +1,164 @@
+.services {
+    padding: 20px;
+    padding-top: 120px;
+    background-color: #F8DB82;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+
+        >h3 {
+            color: #91241e;
+            margin: 15px;
+            font-size: 3vw;
+            font-weight: 450;
+            border-bottom: 2px solid red;
+        }
+    }
+
+    .allServices {
+        >ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            >li {
+                color: white;
+                text-align: center;
+                padding: 10px;
+                margin: 5px;
+                background: #EF4036;
+                border-radius: 15px;
+                font-size: 1rem;
+                transition: all 0.2s ease-in-out, transform 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background: #ad2c25;
+                }
+            }
+        }
+    }
+
+    >.services-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        >form {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            width: 80%;
+            background: #0000000d;
+            padding: 30px;
+            border-radius: 20px;
+
+            &::before {
+                content: '';
+                background-image: url('../assets/service-form.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                opacity: 0.2;
+                box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            }
+
+            >label {
+                margin: 10px;
+                width: 90%;
+                position: relative;
+
+
+                >input {
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                >select {
+                    padding: 10px;
+                    width: 100%;
+                    border-radius: 10px;
+                    border: none;
+                    cursor: pointer;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            >button {
+                position: relative;
+                margin-top: 20px;
+                align-self: center;
+                padding: 10px;
+                border-radius: 10px;
+                border: none;
+                cursor: pointer;
+                color: white;
+                background-color: rgb(226, 76, 76);
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                    background: rgb(166, 2, 2);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .services {
+        >div {
+            >h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        .allServices {
+            >ul>li {
+                font-size: 0.9rem;
+            }
+        }
+
+        .services-form {
+            >form {
+                width: 100%;
+
+                >label {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+
+    }
+}

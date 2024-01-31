@@ -1,0 +1,64 @@
+.history {
+    padding: 20px;
+    padding-top: 120px;
+    background-color: #F8DB82;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+
+    >div {
+        position: relative;
+        width: 90%;
+        padding: 45px;
+        border-radius: 20px;
+        margin-block: 20px;
+        background: #0000000d;
+
+        &::before {
+            content: '';
+            background-image: url('../assets/history_card.jpg');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            opacity: 0.2;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+        }
+
+        >h1 {
+            color: #6f1b17;
+            text-align: center;
+            font-weight: 450;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        >div{
+            >.head{
+                background-color: rgb(149, 0, 0);
+                color: white;
+                padding: 5px;
+                text-align: center;
+                border-radius: 30px;
+                margin: 20px 0px 10px;
+                font-weight: 450;
+            }
+
+            >p{
+                padding-inline: 15px;
+                font-size: 1.1rem;
+                font-weight: 450;
+                >.sub-head{
+                    font-style: italic;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+}
