@@ -1,15 +1,16 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.scss'
 import Events from './components/Events';
 import Gallery from './components/Gallery';
 import History from './components/History';
-import Home from './components/Home';
-import Navbar from './components/Navbar';
+import Home from './components/Home'
+import Navbar from './components/Navbar'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Services from './components/Services';
 import Footer from './components/Footer';
-import Donation from './components/Donation';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Donation from './components/Donation';
+import { useEffect } from 'react';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -26,8 +27,8 @@ const App = () => {
     <>
       <ToastContainer />
       <BrowserRouter>
-        <Navbar />
         <ScrollToTop />
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/history" element={<History />} />
@@ -42,4 +43,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App
